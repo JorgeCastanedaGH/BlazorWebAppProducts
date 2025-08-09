@@ -3,7 +3,7 @@
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\jc\d\VSP\BlazorWebAppProducts\BlazorWebAppProducts\bin\Release\net8.0\publish\</_PublishTargetUrl>
-    <History>True|2025-08-09T19:07:16.5646272Z||;</History>
+    <History>True|2025-08-09T21:07:04.7382501Z||;True|2025-08-09T13:07:16.5646272-06:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
