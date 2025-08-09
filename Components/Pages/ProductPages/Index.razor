@@ -1,0 +1,39 @@
+﻿@page "/products"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using BlazorWebAppProducts.Models
+@using BlazorWebAppProducts.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<BlazorWebAppProducts.Data.BlazorWebAppProductsContext> DbFactory
+
+<PageTitle>Index</PageTitle>
+
+<h1>Index</h1>
+
+<p>
+    <a href="products/create">Create New</a>
+</p>
+
+<QuickGrid Class="table" Items="context.Product">
+    <PropertyColumn Property="product => product.Title" />
+    <PropertyColumn Property="product => product.ReleaseDate" />
+    <PropertyColumn Property="product => product.Genre" />
+    <PropertyColumn Property="product => product.Price" />
+
+    <TemplateColumn Context="product">
+        <a href="@($"products/edit?id={product.Id}")">Edit</a> |
+        <a href="@($"products/details?id={product.Id}")">Details</a> |
+        <a href="@($"products/delete?id={product.Id}")">Delete</a>
+    </TemplateColumn>
+</QuickGrid>
+
+@code {
+    private BlazorWebAppProductsContext context = default!;
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}
