@@ -261,10 +261,10 @@ C:\jc\d\VSP\BlazorWebAppProducts\BlazorWebAppProducts\obj\Debug\net8.0\staticweb
 C:\jc\d\VSP\BlazorWebAppProducts\BlazorWebAppProducts\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\jc\d\VSP\BlazorWebAppProducts\BlazorWebAppProducts\obj\Debug\net8.0\staticwebassets.development.json
 C:\jc\d\VSP\BlazorWebAppProducts\BlazorWebAppProducts\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\jc\d\VSP\BlazorWebAppProducts\BlazorWebAppProducts\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\jc\d\VSP\BlazorWebAppProducts\BlazorWebAppProducts\obj\Debug\net8.0\BlazorWe.A0BCFD4E.Up2Date
 C:\jc\d\VSP\BlazorWebAppProducts\BlazorWebAppProducts\obj\Debug\net8.0\BlazorWebAppProducts.dll
 C:\jc\d\VSP\BlazorWebAppProducts\BlazorWebAppProducts\obj\Debug\net8.0\refint\BlazorWebAppProducts.dll
 C:\jc\d\VSP\BlazorWebAppProducts\BlazorWebAppProducts\obj\Debug\net8.0\BlazorWebAppProducts.pdb
 C:\jc\d\VSP\BlazorWebAppProducts\BlazorWebAppProducts\obj\Debug\net8.0\BlazorWebAppProducts.genruntimeconfig.cache
 C:\jc\d\VSP\BlazorWebAppProducts\BlazorWebAppProducts\obj\Debug\net8.0\ref\BlazorWebAppProducts.dll
+C:\jc\d\VSP\BlazorWebAppProducts\BlazorWebAppProducts\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
