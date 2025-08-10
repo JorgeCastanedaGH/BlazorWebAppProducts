@@ -1,0 +1,44 @@
+﻿@page "/weatherom"
+@using BlazorWebAppProducts.Models;
+@attribute [StreamRendering(true)]
+
+@inject OpenMeteoApiClient OMAC
+
+<PageTitle>WeatherOM</PageTitle>
+
+<h1>Weather</h1>
+
+@if (forecast == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th aria-label="Temperature in Celsius">Temp. (C)</th>
+                <th aria-label="Temperature in Farenheit">Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@forecast.Date.ToShortDateString()</td>
+                <td>@forecast.TemperatureC</td>
+                <td>@forecast.TemperatureF</td>
+                <td>@forecast.Summary</td>
+            </tr>
+        </tbody>
+    </table>
+}
+
+@code {
+    private WeatherForecastOM? forecast;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecast = await OMAC.GetWeatherAsync();
+    }
+}

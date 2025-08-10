@@ -1,7 +1,9 @@
 ﻿using BlazorWebAppProducts.Components;
+using BlazorWebAppProducts.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using BlazorWebAppProducts.Data;
+
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContextFactory<BlazorWebAppProductsContext>(options =>
@@ -10,6 +12,8 @@ builder.Services.AddDbContextFactory<BlazorWebAppProductsContext>(options =>
 builder.Services.AddQuickGridEntityFrameworkAdapter();
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+builder.Services.AddHttpClient<OpenMeteoApiClient>(client => client.BaseAddress = new Uri("https://api.open-meteo.com/"));
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
